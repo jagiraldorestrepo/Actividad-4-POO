@@ -1,0 +1,41 @@
+@startuml
+annotation java.lang.Override
+class Inmuebles.Apartaestudio
+class Inmuebles.Apartamento
+class Inmuebles.ApartamentoFamiliar
+class Inmuebles.Casa
+class Inmuebles.CasaConjuntoCerrado
+class Inmuebles.CasaIndependiente
+class Inmuebles.CasaRural
+class Inmuebles.CasaUrbana
+class Inmuebles.Inmueble
+class Inmuebles.InmuebleVivienda
+class Inmuebles.Local
+class Inmuebles.LocalComercial
+class Inmuebles.Oficina
+class Inmuebles.Prueba
+Inmuebles.Apartaestudio ..> java.lang.Override
+Inmuebles.Apartaestudio --|> Inmuebles.Apartamento
+Inmuebles.Apartamento ..> java.lang.Override
+Inmuebles.Apartamento --|> Inmuebles.InmuebleVivienda
+Inmuebles.ApartamentoFamiliar ..> java.lang.Override
+Inmuebles.ApartamentoFamiliar --|> Inmuebles.Apartamento
+Inmuebles.Casa ..> java.lang.Override
+Inmuebles.Casa --|> Inmuebles.InmuebleVivienda
+Inmuebles.CasaConjuntoCerrado ..> java.lang.Override
+Inmuebles.CasaConjuntoCerrado --|> Inmuebles.CasaUrbana
+Inmuebles.CasaIndependiente ..> java.lang.Override
+Inmuebles.CasaIndependiente --|> Inmuebles.CasaUrbana
+Inmuebles.CasaRural ..> java.lang.Override
+Inmuebles.CasaRural --|> Inmuebles.Casa
+Inmuebles.CasaUrbana ..> java.lang.Override
+Inmuebles.CasaUrbana --|> Inmuebles.Casa
+Inmuebles.InmuebleVivienda ..> java.lang.Override
+Inmuebles.InmuebleVivienda --|> Inmuebles.Inmueble
+Inmuebles.Local ..> java.lang.Override
+Inmuebles.Local --|> Inmuebles.Inmueble
+Inmuebles.LocalComercial ..> java.lang.Override
+Inmuebles.LocalComercial --|> Inmuebles.Local
+Inmuebles.Oficina ..> java.lang.Override
+Inmuebles.Oficina --|> Inmuebles.Local
+@enduml
